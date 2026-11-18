@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#14324a"><meta name="apple-mobile-web-app-title" content="やること"><link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFXElEQVR4Aeyd3Y0UOxBGV6QAmwERQBaQACGSAGGQARkgcqCfRiu72+7y1rjK/s5VP+y0f6rqfEcrXWlWfPj05RsPBE4JfHjhPwhcEECOCzC8fnlBDiy4JIAcl2hYQA4cuCSAHJdoWECOAQdUjiCHStIDcyLHADSVI8ihkvTAnMgxAE3lCHKoJD0wJ3IMQFM5ghwqSQ/M6SrHQH2OJCaAHInDiW4NOaITSFwfORKHE90ackQnkLg+ciQOJ7o15IhOIHF95IgOJ3F95EgcTnRryBGdQOL6yJE4nOjWkCM6gcT1kSNxONGtIUd0AonrI0ficKJbyytHNBnq87eyOHBNYOHfHH9//yqe6zHnrRQtHR/n1fautLAc3ii4rySAHCURPj8IIMcDBT+UBJCjJMLnBwHkeKDY4QffGZDDl+dWtz1XjuN/5Hyf++x967ZvC+zqfumBnc+VY6AhjuQhgBx5skjXCXKkiyRPQ8iRJ4t0nSBHukjyNCQiRx7gK3WCHCulNblX5JgMfKVyyLFSWpN7RY7JwFcqhxwrpTW5V+SYDHylcsixUlpze+Xb55N5L1Vu4d8cr1+/F08G8kVLx8cMXY31sLAcYwNz6j4B5LjPSm4ncshFfn/gxeRof13v7ep9BO/f+bZu++f315p5w2JyzERDLeSwOyBzAjlkorYPihx2ZjInkEMmavugyGFnJnMCOWSitg+KHHZmMieQQyZq+6CectircyI1AeRIHU9sc5FyvFZfyOBNTSDQj0g5Asem9B0CyHGHkuge5BAN/s7YyHGHkuge5AgOPnN55MicTnBvyBEcQObyyJE5neDekCM4gMzlkSNzOsG9IUdwAJnLC8nR/ouSYrXOrNjQ/uh+vL5wwpu0ckyYnRIdAsjRAaS8jBzK6XdmR44OIOVl5FBOvzM7cnQAKS8jh3L6ndmRowNoqWXnZpHDGehO1yHHTmk6z4IczkB3ug45dkrTeRYhOeq/F2q8qTE3NtdL7sfrCye8EZJjAs3NSiDHZoF6jqMhhycxobuQQyhs66jIYSUmtH8lOdrfzCtW6wyLDe2P9fE/Pz7ef+rj7XLFan085M1KcoQAUi6KHMrpd2ZHjg4g5WXkUE6/OfsL/wBgh4/0Mr85pONvD48cbT7Sq8ghHX97eORo85FeRQ7p+NvDI0ebj/Qqcpjj1zmwkhz1t/Eab+oIG5vrpfr455//7j/18bpE4019POTNSnKEAFIuihzK6XdmR44OIOVl5FBOvzM7cnQAKS+vJEfxXbr2xzrU9v5i1f14fWH+N45y5B+WDm0EkMPGS2o3ckjFbRsWOWy8pHYjh1TctmGRw8ZLajdySMVtGxY5bLy8d6e+DzlSxxPbHHLE8k9dHTlSxxPbHHLE8k9dfSU5Gt+rq5dq6vWexhv34/WF+d+sJEd+mpt1iBybBeo5TlY5PGfkrkECyDEITuEYciikPDgjcgyCUziGHAopD86IHIPgFI4hh0LKgzNGylH8NQAfTwkYgvXeGimH9yzc50wAOZyB7nQdcuyUpvMsyOEMdKfrkGOnNJ1nQQ5noDtdhxw7pek8i4QczsxkrkMOmajtgz5XjsaXNFlyIWBP3HDiuXIYGmFrPgLIkS+TNB0hR5oo8jWCHPkySdMRcqSJIlkjRzvIcUDgOSeAHOdceHsQQI4DAs85AeQ458LbgwByHBB4zgkgxzkX3h4EkOOAwHNOADnOuVy/FVpBDqGwraMih5WY0H7kEArbOipyWIkJ7UcOobCtoyKHlZjQfuQQCts6qp8c1srsT08AOdJHFNcgcsSxT18ZOdJHFNcgcsSxT18ZOdJHFNfgfwAAAP//0DDvcwAAAAZJREFUAwBG1NTlt6nnjwAAAABJRU5ErkJggg=="><title>やること</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&amp;family=Zen+Kaku+Gothic+New:wght@700;900&amp;display=swap" rel="stylesheet"><style id="css">
+/* 現場の掲示板：紺のヘッダー＋白い紙面、締切は朱、角は立てる */
+:root{
+  --bg:#eef1f3; --paper:#ffffff; --ink:#17212b; --mute:#5f6b78; --line:#d5dbe1;
+  --accent:#14526e; --accent-soft:#e1edf2; --due:#c2410c; --due-soft:#fbe9e0; --ok:#2f7d4f; --ok-soft:#e3f1e8; --do:#6b4fa3; --do-soft:#ece7f5;
+  --head:#14324a; --head-ink:#ffffff;
+  --f-display:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-body:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f161d; --paper:#17212b; --ink:#e6ebf0; --mute:#9aa6b2; --line:#2a3743;
+  --accent:#6fb3d2; --accent-soft:#1b3442; --due:#f08a5d; --due-soft:#3a2219; --ok:#6cc08f; --ok-soft:#1a3426; --do:#b39ae6; --do-soft:#2a2340;
+  --head:#0b2233; --head-ink:#e6ebf0; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0f161d; --paper:#17212b; --ink:#e6ebf0; --mute:#9aa6b2; --line:#2a3743;
+  --accent:#6fb3d2; --accent-soft:#1b3442; --due:#f08a5d; --due-soft:#3a2219; --ok:#6cc08f; --ok-soft:#1a3426; --do:#b39ae6; --do-soft:#2a2340;
+  --head:#0b2233; --head-ink:#e6ebf0; color-scheme:dark;}
+*{box-sizing:border-box;border-radius:0}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.6;font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:780px;margin:0 auto;padding:0 calc(16px + env(safe-area-inset-right)) calc(96px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left))}
+header.top{background:var(--head);color:var(--head-ink)}
+header.top .in{max-width:780px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) 12px calc(16px + env(safe-area-inset-left));display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+header.top h1{font-family:var(--f-display);font-weight:900;font-size:20px;margin:0;letter-spacing:.04em}
+header.top .date{font-size:13px;opacity:.85}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:10;padding-bottom:env(safe-area-inset-bottom)}
+nav.tabs .in{display:flex;width:100%;max-width:780px}
+nav.tabs a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 4px 9px;color:var(--mute);text-decoration:none;font-size:11px;font-weight:700;border-top:3px solid transparent}
+nav.tabs a svg{width:22px;height:22px}
+nav.tabs a[aria-current="page"]{color:var(--accent);border-top-color:var(--accent)}
+h2{font-family:var(--f-display);font-size:16px;font-weight:700;margin:22px 0 8px;display:flex;align-items:center;gap:8px;text-wrap:balance}
+h2 .n{font-family:var(--f-body);font-size:12px;color:var(--mute);font-weight:400}
+.card{background:var(--paper);border:1px solid var(--line)}
+.row{display:flex;align-items:center;gap:10px;padding:10px 12px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .main{flex:1;min-width:0}
+.row .t{font-weight:700;overflow-wrap:anywhere}
+.row .s{font-size:12.5px;color:var(--mute)}
+a.row{color:inherit;text-decoration:none}
+a.row:hover{background:var(--accent-soft)}
+.chev{width:16px;height:16px;color:var(--mute);flex:none}
+.stripe{width:4px;align-self:stretch;flex:none;background:var(--accent)}
+.k-deadline .stripe{background:var(--due)} .k-do .stripe{background:var(--do)} .k-span .stripe{background:var(--accent)}
+.chk{width:26px;height:26px;flex:none;border:2px solid var(--mute);background:var(--paper);display:grid;place-items:center;cursor:pointer;padding:0}
+.chk svg{width:16px;height:16px;opacity:0}
+.chk[aria-pressed="true"]{background:var(--ok);border-color:var(--ok);color:#fff}
+.chk[aria-pressed="true"] svg{opacity:1}
+.done .t{text-decoration:line-through;color:var(--mute)}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 7px;border:1px solid currentColor;white-space:nowrap}
+.p-進行中{color:var(--accent)} .p-完了{color:var(--ok)} .p-保留{color:var(--mute)} .p-未着手{color:var(--due)}
+.when{font-size:12px;font-weight:700;white-space:nowrap;color:var(--mute);text-align:right;min-width:54px}
+.when.late{color:var(--due)} .when.today{color:var(--accent)}
+.empty{padding:14px 12px;color:var(--mute);font-size:13.5px}
+.meter{height:8px;background:var(--line);margin-top:6px}
+.meter i{display:block;height:100%;background:var(--accent)}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.kpi div{background:var(--paper);padding:10px 12px}
+.kpi b{display:block;font-family:var(--f-display);font-size:24px;line-height:1.2}
+.kpi span{font-size:12px;color:var(--mute)}
+.kpi .late b{color:var(--due)}
+/* detail */
+.back{display:inline-flex;align-items:center;gap:4px;margin-top:14px;color:var(--accent);text-decoration:none;font-weight:700;font-size:14px}
+.dhead{margin:10px 0 0}
+.dhead .cat{font-size:12px;color:var(--mute)}
+.dhead h2{font-size:22px;margin:2px 0 10px}
+dl.facts{display:grid;grid-template-columns:7.5em 1fr;margin:0;background:var(--paper);border:1px solid var(--line)}
+dl.facts dt,dl.facts dd{margin:0;padding:8px 12px;border-top:1px solid var(--line)}
+dl.facts dt{color:var(--mute);font-size:13px;background:var(--bg)}
+dl.facts dt:first-of-type,dl.facts dd:first-of-type{border-top:0}
+label.f{display:block;font-size:13px;font-weight:700;margin:14px 0 4px}
+textarea,input[type=text],input[type=date],input[type=number],select{width:100%;border:1px solid var(--line);background:var(--paper);padding:8px 10px}
+textarea{min-height:64px;resize:vertical}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;font-weight:700;padding:8px 14px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.memo{padding:10px 12px;border-top:1px solid var(--line)}
+.memo:first-child{border-top:0}
+.memo .d{font-size:12px;color:var(--mute);font-weight:700}
+.memo .x{font-size:12px;color:var(--mute);background:none;border:0;cursor:pointer;float:right;padding:0 2px}
+.grid3{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:420px){.grid3{grid-template-columns:1fr}}
+table.trk{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);font-size:13.5px}
+table.trk th,table.trk td{padding:6px 8px;border-top:1px solid var(--line);text-align:right}
+table.trk th:first-child,table.trk td:first-child{text-align:left}
+table.trk thead th{background:var(--bg);font-size:12px;color:var(--mute);border-top:0}
+table.trk input{width:4.5em;text-align:right;padding:4px 6px}
+table.trk tr.cur td{background:var(--accent-soft)}
+/* calendar */
+.calbar{display:flex;align-items:center;justify-content:space-between;margin:16px 0 8px}
+.calbar h2{margin:0;font-size:18px}
+.iconbtn{width:40px;height:40px;border:1px solid var(--line);background:var(--paper);display:grid;place-items:center;cursor:pointer}
+.iconbtn svg{width:18px;height:18px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cal .wd{background:var(--bg);font-size:11.5px;text-align:center;padding:4px 0;color:var(--mute);font-weight:700}
+.cal .wd.sun,.cal .day.sun .num,.cal .day.hol .num{color:var(--due)}
+.cal .wd.sat,.cal .day.sat .num{color:var(--accent)}
+.cal .day{background:var(--paper);min-height:76px;padding:3px 3px 4px;cursor:pointer;display:flex;flex-direction:column;gap:2px;border:0;text-align:left;min-width:0}
+.cal .day.out{background:var(--bg);opacity:.55}
+.cal .day .num{font-size:12px;font-weight:700;line-height:1.2}
+.cal .day.is-today .num{background:var(--accent);color:#fff;padding:0 4px;align-self:flex-start}
+.cal .day.sel{outline:2px solid var(--accent);outline-offset:-2px}
+.cal .ev{font-size:10px;line-height:1.35;padding:0 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:700}
+.cal .ev.k-deadline{background:var(--due-soft);color:var(--due)}
+.cal .ev.k-span{background:var(--accent-soft);color:var(--accent)}
+.cal .ev.k-do{background:var(--do-soft);color:var(--do)}
+.cal .ev.isdone{opacity:.45;text-decoration:line-through}
+.cal .more{font-size:10px;color:var(--mute)}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mute);margin:8px 0}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:4px;vertical-align:-1px}
+/* notify */
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;padding:10px 12px 10px 44px;border-top:1px solid var(--line);position:relative}
+.steps li:first-child{border-top:0}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:10px;width:22px;height:22px;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
+.note{font-size:13px;color:var(--mute);margin:8px 0}
+.toast{position:fixed;left:50%;bottom:calc(78px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:7px 14px;font-size:13px;font-weight:700;z-index:20;display:none}
+.toast.on{display:block}
+.ro{background:var(--due-soft);color:var(--due);font-size:13px;padding:8px 12px;margin-top:12px;display:none}
+.ro.on{display:block}
+@media (prefers-reduced-motion:no-preference){a.row,.btn{transition:background .12s}}
+</style></head><body><div id="app"></div><script type="application/json" id="data">{"tasks": [{"id": "kesshou", "cat": "期限あり", "name": "「消滅」の掘り起こし", "flag": "主任", "who": "エリアメンバー", "freq": "10月末（月曜・空き時間）", "where": "社内", "goal": "全ての案件の精査完了", "contrib": "部品A", "status": "進行中", "note": "10月末で終了。11月以降の月曜は空く"}, {"id": "zero1", "cat": "期限あり", "name": "０→１活動", "flag": "主任", "who": "正社員", "freq": "12月めど（2週で10件）", "where": "客先", "goal": "2週で10件ペース", "contrib": "部品A", "status": "進行中", "note": "2週ごとに10件。実績は詳細ページのトラッカーに入力"}, {"id": "tsushin", "cat": "期限あり", "name": "通信ミドル目指し", "flag": "主任", "who": "エリアメンバー", "freq": "2月まで（月曜勉強会・同行）", "where": "社内", "goal": "全員のミドル到達", "contrib": "エリア全体", "status": "進行中", "note": "毎週月曜に勉強会（祝日の月曜は休み）"}, {"id": "p8950", "cat": "期限あり", "name": "8950点検", "flag": "8950担当", "who": "8950担当＋エリア", "freq": "3月末まで", "where": "納入先", "goal": "今期台数21台の完了", "contrib": "メンテ予算", "status": "進行中", "note": "着手月を決めたらカレンダーに入れる"}, {"id": "ce", "cat": "定例", "name": "CE案件の整理", "flag": "主任", "who": "エリアメンバー", "freq": "毎月 月初3営業日まで", "where": "社内", "goal": "毎月案件残なくなったか？", "contrib": "部品A", "status": "", "note": "月初見込みと同時期なので、担当を分けると楽"}, {"id": "getsusho", "cat": "定例", "name": "月初見込み", "flag": "主任", "who": "エリアメンバー", "freq": "毎月 月初3営業日まで", "where": "社内", "goal": "", "contrib": "部品A", "status": "", "note": ""}, {"id": "saishu", "cat": "定例", "name": "最終見込み", "flag": "主任", "who": "エリアメンバー", "freq": "毎月 2週目の金曜まで", "where": "社内", "goal": "", "contrib": "部品A", "status": "", "note": "月初見込みから約1週間後に確定"}, {"id": "tanaoroshi", "cat": "定例", "name": "共有在庫の月一棚卸", "flag": "主任", "who": "エリアメンバー", "freq": "毎月1回（第3週推奨）", "where": "社内", "goal": "", "contrib": "時間確保", "status": "", "note": "月初を避けて月中に"}, {"id": "buhin", "cat": "定例", "name": "部品の整理・廃棄", "flag": "主任", "who": "主任", "freq": "毎月1回（第3週推奨）", "where": "社内", "goal": "", "contrib": "時間確保", "status": "", "note": "棚卸と同じ日にやると一度で済む"}, {"id": "iryo", "cat": "定例", "name": "医療機器テスト", "flag": "主任", "who": "全員", "freq": "3か月に1回（案内が届いた月）", "where": "社内", "goal": "", "contrib": "自分", "status": "", "note": "案内が届いた月に実施（月は未定）"}, {"id": "ato30", "cat": "訪問時", "name": "30万以上の後追い", "flag": "主任", "who": "エリアメンバー", "freq": "都度", "where": "社内", "goal": "", "contrib": "部品A", "status": "", "note": "見積30万超え → 翌週に1回フォロー など、きっかけを決めて都度対応"}, {"id": "tsunaatsu", "cat": "訪問時", "name": "つなあつ活動", "flag": "主任", "who": "全員", "freq": "顧客訪問時", "where": "客先", "goal": "", "contrib": "PBへの更新", "status": "", "note": "客先訪問のたびに（訪問チェックリスト）"}, {"id": "bedkoushin", "cat": "訪問時", "name": "ベッド更新予定確認", "flag": "主任", "who": "全員", "freq": "顧客訪問時", "where": "客先", "goal": "", "contrib": "PBへの更新", "status": "", "note": "客先訪問のたびに（訪問チェックリスト）"}], "events": [{"id": "tsushin-2026-09-28", "task": "tsushin", "date": "2026-09-28", "end": "2026-09-28", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "ce-2026-10-01", "task": "ce", "date": "2026-10-01", "end": "2026-10-05", "title": "月初：CE案件の整理（〆10/5）", "kind": "span"}, {"id": "getsusho-2026-10-01", "task": "getsusho", "date": "2026-10-01", "end": "2026-10-05", "title": "月初：月初見込み（〆10/5）", "kind": "span"}, {"id": "tsushin-2026-10-05", "task": "tsushin", "date": "2026-10-05", "end": "2026-10-05", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "saishu-2026-10-09", "task": "saishu", "date": "2026-10-09", "end": "2026-10-09", "title": "〆 最終見込み", "kind": "deadline"}, {"id": "buhin-2026-10-12", "task": "buhin", "date": "2026-10-12", "end": "2026-10-16", "title": "今週：部品の整理・廃棄", "kind": "span"}, {"id": "tanaoroshi-2026-10-12", "task": "tanaoroshi", "date": "2026-10-12", "end": "2026-10-16", "title": "今週：共有在庫の月一棚卸", "kind": "span"}, {"id": "zero1-2026-10-16", "task": "zero1", "date": "2026-10-16", "end": "2026-10-16", "title": "０→１ 第1期締め（累計10件）", "kind": "deadline"}, {"id": "tsushin-2026-10-19", "task": "tsushin", "date": "2026-10-19", "end": "2026-10-19", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "tsushin-2026-10-26", "task": "tsushin", "date": "2026-10-26", "end": "2026-10-26", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "kesshou-2026-10-30", "task": "kesshou", "date": "2026-10-30", "end": "2026-10-30", "title": "〆「消滅」の掘り起こし", "kind": "deadline"}, {"id": "zero1-2026-10-30", "task": "zero1", "date": "2026-10-30", "end": "2026-10-30", "title": "０→１ 第2期締め（累計20件）", "kind": "deadline"}, {"id": "ce-2026-11-02", "task": "ce", "date": "2026-11-02", "end": "2026-11-05", "title": "月初：CE案件の整理（〆11/5）", "kind": "span"}, {"id": "getsusho-2026-11-02", "task": "getsusho", "date": "2026-11-02", "end": "2026-11-05", "title": "月初：月初見込み（〆11/5）", "kind": "span"}, {"id": "tsushin-2026-11-02", "task": "tsushin", "date": "2026-11-02", "end": "2026-11-02", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "tsushin-2026-11-09", "task": "tsushin", "date": "2026-11-09", "end": "2026-11-09", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "saishu-2026-11-13", "task": "saishu", "date": "2026-11-13", "end": "2026-11-13", "title": "〆 最終見込み", "kind": "deadline"}, {"id": "zero1-2026-11-13", "task": "zero1", "date": "2026-11-13", "end": "2026-11-13", "title": "０→１ 第3期締め（累計30件）", "kind": "deadline"}, {"id": "buhin-2026-11-16", "task": "buhin", "date": "2026-11-16", "end": "2026-11-20", "title": "今週：部品の整理・廃棄", "kind": "span"}, {"id": "tanaoroshi-2026-11-16", "task": "tanaoroshi", "date": "2026-11-16", "end": "2026-11-20", "title": "今週：共有在庫の月一棚卸", "kind": "span"}, {"id": "tsushin-2026-11-16", "task": "tsushin", "date": "2026-11-16", "end": "2026-11-16", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "zero1-2026-11-27", "task": "zero1", "date": "2026-11-27", "end": "2026-11-27", "title": "０→１ 第4期締め（累計40件）", "kind": "deadline"}, {"id": "tsushin-2026-11-30", "task": "tsushin", "date": "2026-11-30", "end": "2026-11-30", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "ce-2026-12-01", "task": "ce", "date": "2026-12-01", "end": "2026-12-03", "title": "月初：CE案件の整理（〆12/3）", "kind": "span"}, {"id": "getsusho-2026-12-01", "task": "getsusho", "date": "2026-12-01", "end": "2026-12-03", "title": "月初：月初見込み（〆12/3）", "kind": "span"}, {"id": "tsushin-2026-12-07", "task": "tsushin", "date": "2026-12-07", "end": "2026-12-07", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "saishu-2026-12-11", "task": "saishu", "date": "2026-12-11", "end": "2026-12-11", "title": "〆 最終見込み", "kind": "deadline"}, {"id": "zero1-2026-12-11", "task": "zero1", "date": "2026-12-11", "end": "2026-12-11", "title": "０→１ 第5期締め（累計50件）", "kind": "deadline"}, {"id": "buhin-2026-12-14", "task": "buhin", "date": "2026-12-14", "end": "2026-12-18", "title": "今週：部品の整理・廃棄", "kind": "span"}, {"id": "tanaoroshi-2026-12-14", "task": "tanaoroshi", "date": "2026-12-14", "end": "2026-12-18", "title": "今週：共有在庫の月一棚卸", "kind": "span"}, {"id": "tsushin-2026-12-14", "task": "tsushin", "date": "2026-12-14", "end": "2026-12-14", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "tsushin-2026-12-21", "task": "tsushin", "date": "2026-12-21", "end": "2026-12-21", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "zero1-2026-12-25", "task": "zero1", "date": "2026-12-25", "end": "2026-12-25", "title": "０→１ 第6期締め（累計60件）", "kind": "deadline"}, {"id": "tsushin-2026-12-28", "task": "tsushin", "date": "2026-12-28", "end": "2026-12-28", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "ce-2027-01-04", "task": "ce", "date": "2027-01-04", "end": "2027-01-06", "title": "月初：CE案件の整理（〆1/6）", "kind": "span"}, {"id": "getsusho-2027-01-04", "task": "getsusho", "date": "2027-01-04", "end": "2027-01-06", "title": "月初：月初見込み（〆1/6）", "kind": "span"}, {"id": "tsushin-2027-01-04", "task": "tsushin", "date": "2027-01-04", "end": "2027-01-04", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "saishu-2027-01-08", "task": "saishu", "date": "2027-01-08", "end": "2027-01-08", "title": "〆 最終見込み", "kind": "deadline"}, {"id": "buhin-2027-01-18", "task": "buhin", "date": "2027-01-18", "end": "2027-01-22", "title": "今週：部品の整理・廃棄", "kind": "span"}, {"id": "tanaoroshi-2027-01-18", "task": "tanaoroshi", "date": "2027-01-18", "end": "2027-01-22", "title": "今週：共有在庫の月一棚卸", "kind": "span"}, {"id": "tsushin-2027-01-18", "task": "tsushin", "date": "2027-01-18", "end": "2027-01-18", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "tsushin-2027-01-25", "task": "tsushin", "date": "2027-01-25", "end": "2027-01-25", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "ce-2027-02-01", "task": "ce", "date": "2027-02-01", "end": "2027-02-03", "title": "月初：CE案件の整理（〆2/3）", "kind": "span"}, {"id": "getsusho-2027-02-01", "task": "getsusho", "date": "2027-02-01", "end": "2027-02-03", "title": "月初：月初見込み（〆2/3）", "kind": "span"}, {"id": "tsushin-2027-02-01", "task": "tsushin", "date": "2027-02-01", "end": "2027-02-01", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "tsushin-2027-02-08", "task": "tsushin", "date": "2027-02-08", "end": "2027-02-08", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "saishu-2027-02-12", "task": "saishu", "date": "2027-02-12", "end": "2027-02-12", "title": "〆 最終見込み", "kind": "deadline"}, {"id": "buhin-2027-02-15", "task": "buhin", "date": "2027-02-15", "end": "2027-02-19", "title": "今週：部品の整理・廃棄", "kind": "span"}, {"id": "tanaoroshi-2027-02-15", "task": "tanaoroshi", "date": "2027-02-15", "end": "2027-02-19", "title": "今週：共有在庫の月一棚卸", "kind": "span"}, {"id": "tsushin-2027-02-15", "task": "tsushin", "date": "2027-02-15", "end": "2027-02-15", "title": "通信ミドル勉強会", "kind": "do"}, {"id": "tsushin-2027-02-26", "task": "tsushin", "date": "2027-02-26", "end": "2027-02-26", "title": "〆 通信ミドル（全員ミドル到達）", "kind": "deadline"}, {"id": "ce-2027-03-01", "task": "ce", "date": "2027-03-01", "end": "2027-03-03", "title": "月初：CE案件の整理（〆3/3）", "kind": "span"}, {"id": "getsusho-2027-03-01", "task": "getsusho", "date": "2027-03-01", "end": "2027-03-03", "title": "月初：月初見込み（〆3/3）", "kind": "span"}, {"id": "saishu-2027-03-12", "task": "saishu", "date": "2027-03-12", "end": "2027-03-12", "title": "〆 最終見込み", "kind": "deadline"}, {"id": "buhin-2027-03-15", "task": "buhin", "date": "2027-03-15", "end": "2027-03-19", "title": "今週：部品の整理・廃棄", "kind": "span"}, {"id": "tanaoroshi-2027-03-15", "task": "tanaoroshi", "date": "2027-03-15", "end": "2027-03-19", "title": "今週：共有在庫の月一棚卸", "kind": "span"}, {"id": "p8950-2027-03-31", "task": "p8950", "date": "2027-03-31", "end": "2027-03-31", "title": "〆 8950点検（21台）", "kind": "deadline"}], "holidays": ["2026-10-12", "2026-11-03", "2026-11-23", "2026-12-29", "2026-12-30", "2026-12-31", "2027-01-01", "2027-01-02", "2027-01-03", "2027-01-11", "2027-02-11", "2027-02-23", "2027-03-22"]}</script><script type="application/json" id="state">{"status": {}, "fields": {}, "memos": {}, "done": {}, "tracker": [null, null, null, null, null, null]}</script><script id="appjs">
+(function(){
+"use strict";
+var DATA=JSON.parse(document.getElementById('data').textContent);
+var state=JSON.parse(document.getElementById('state').textContent||'{}');
+var HEAD='<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#14324a"><meta name="apple-mobile-web-app-title" content="やること"><link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFXElEQVR4Aeyd3Y0UOxBGV6QAmwERQBaQACGSAGGQARkgcqCfRiu72+7y1rjK/s5VP+y0f6rqfEcrXWlWfPj05RsPBE4JfHjhPwhcEECOCzC8fnlBDiy4JIAcl2hYQA4cuCSAHJdoWECOAQdUjiCHStIDcyLHADSVI8ihkvTAnMgxAE3lCHKoJD0wJ3IMQFM5ghwqSQ/M6SrHQH2OJCaAHInDiW4NOaITSFwfORKHE90ackQnkLg+ciQOJ7o15IhOIHF95IgOJ3F95EgcTnRryBGdQOL6yJE4nOjWkCM6gcT1kSNxONGtIUd0AonrI0ficKJbyytHNBnq87eyOHBNYOHfHH9//yqe6zHnrRQtHR/n1fautLAc3ii4rySAHCURPj8IIMcDBT+UBJCjJMLnBwHkeKDY4QffGZDDl+dWtz1XjuN/5Hyf++x967ZvC+zqfumBnc+VY6AhjuQhgBx5skjXCXKkiyRPQ8iRJ4t0nSBHukjyNCQiRx7gK3WCHCulNblX5JgMfKVyyLFSWpN7RY7JwFcqhxwrpTW5V+SYDHylcsixUlpze+Xb55N5L1Vu4d8cr1+/F08G8kVLx8cMXY31sLAcYwNz6j4B5LjPSm4ncshFfn/gxeRof13v7ep9BO/f+bZu++f315p5w2JyzERDLeSwOyBzAjlkorYPihx2ZjInkEMmavugyGFnJnMCOWSitg+KHHZmMieQQyZq+6CectircyI1AeRIHU9sc5FyvFZfyOBNTSDQj0g5Asem9B0CyHGHkuge5BAN/s7YyHGHkuge5AgOPnN55MicTnBvyBEcQObyyJE5neDekCM4gMzlkSNzOsG9IUdwAJnLC8nR/ouSYrXOrNjQ/uh+vL5wwpu0ckyYnRIdAsjRAaS8jBzK6XdmR44OIOVl5FBOvzM7cnQAKS8jh3L6ndmRowNoqWXnZpHDGehO1yHHTmk6z4IczkB3ug45dkrTeRYhOeq/F2q8qTE3NtdL7sfrCye8EZJjAs3NSiDHZoF6jqMhhycxobuQQyhs66jIYSUmtH8lOdrfzCtW6wyLDe2P9fE/Pz7ef+rj7XLFan085M1KcoQAUi6KHMrpd2ZHjg4g5WXkUE6/OfsL/wBgh4/0Mr85pONvD48cbT7Sq8ghHX97eORo85FeRQ7p+NvDI0ebj/Qqcpjj1zmwkhz1t/Eab+oIG5vrpfr455//7j/18bpE4019POTNSnKEAFIuihzK6XdmR44OIOVl5FBOvzM7cnQAKS+vJEfxXbr2xzrU9v5i1f14fWH+N45y5B+WDm0EkMPGS2o3ckjFbRsWOWy8pHYjh1TctmGRw8ZLajdySMVtGxY5bLy8d6e+DzlSxxPbHHLE8k9dHTlSxxPbHHLE8k9dfSU5Gt+rq5dq6vWexhv34/WF+d+sJEd+mpt1iBybBeo5TlY5PGfkrkECyDEITuEYciikPDgjcgyCUziGHAopD86IHIPgFI4hh0LKgzNGylH8NQAfTwkYgvXeGimH9yzc50wAOZyB7nQdcuyUpvMsyOEMdKfrkGOnNJ1nQQ5noDtdhxw7pek8i4QczsxkrkMOmajtgz5XjsaXNFlyIWBP3HDiuXIYGmFrPgLIkS+TNB0hR5oo8jWCHPkySdMRcqSJIlkjRzvIcUDgOSeAHOdceHsQQI4DAs85AeQ458LbgwByHBB4zgkgxzkX3h4EkOOAwHNOADnOuVy/FVpBDqGwraMih5WY0H7kEArbOipyWIkJ7UcOobCtoyKHlZjQfuQQCts6qp8c1srsT08AOdJHFNcgcsSxT18ZOdJHFNcgcsSxT18ZOdJHFNfgfwAAAP//0DDvcwAAAAZJREFUAwBG1NTlt6nnjwAAAABJRU5ErkJggg=="><title>やること</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&amp;family=Zen+Kaku+Gothic+New:wght@700;900&amp;display=swap" rel="stylesheet">';
+['status','fields','memos','done'].forEach(function(k){if(!state[k])state[k]={};});
+if(!state.tracker)state.tracker=[null,null,null,null,null,null];
+var mode='local', artifactApi=null, readOnly=false;
+// localStorage fallback (GitHub Pagesなどで単体HTMLとして開いた場合)
+var LSK='yarukoto-state-v1';
+function lsGet(){try{var s=localStorage.getItem(LSK);return s?JSON.parse(s):null;}catch(e){return null;}}
+function lsSet(){try{localStorage.setItem(LSK,JSON.stringify(state));}catch(e){}}
+
+var TASK={};DATA.tasks.forEach(function(t){TASK[t.id]=t;});
+var HOL={};DATA.holidays.forEach(function(h){HOL[h]=1;});
+var SHORT={kesshou:'消滅',zero1:'0→1',tsushin:'勉強会',p8950:'8950',ce:'CE整理',getsusho:'月初見',saishu:'最終見',tanaoroshi:'棚卸',buhin:'部品'};
+var STATUSES=['未着手','進行中','保留','完了'];
+var ZPER=[['10/5','10/16','2026-10-05','2026-10-16'],['10/19','10/30','2026-10-19','2026-10-30'],['11/2','11/13','2026-11-02','2026-11-13'],['11/16','11/27','2026-11-16','2026-11-27'],['11/30','12/11','2026-11-30','2026-12-11'],['12/14','12/25','2026-12-14','2026-12-25']];
+
+function pad(n){return (n<10?'0':'')+n;}
+function iso(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function parse(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+function addDays(s,n){var d=parse(s);d.setDate(d.getDate()+n);return iso(d);}
+var TODAY=iso(new Date());
+var WD=['日','月','火','水','木','金','土'];
+function md(s){var d=parse(s);return (d.getMonth()+1)+'/'+d.getDate()+'（'+WD[d.getDay()]+'）';}
+function diff(a,b){return Math.round((parse(b)-parse(a))/864e5);}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function statusOf(id){return state.status[id]!==undefined?state.status[id]:(TASK[id].status||'');}
+function fieldOf(id,k){var f=state.fields[id]||{};if(f[k]!==undefined)return f[k];return k==='goal'?TASK[id].goal:'';}
+
+var IC={
+ today:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/><rect x="7" y="13" width="4" height="4" fill="currentColor" stroke="none"/></svg>',
+ list:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6h12M9 12h12M9 18h12"/><rect x="3" y="5" width="2.5" height="2.5" fill="currentColor"/><rect x="3" y="11" width="2.5" height="2.5" fill="currentColor"/><rect x="3" y="17" width="2.5" height="2.5" fill="currentColor"/></svg>',
+ cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4M7 14h2M11 14h2M15 14h2M7 18h2M11 18h2"/></svg>',
+ bell:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4z"/><path d="M10 21h4"/></svg>',
+ chev:'<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>',
+ back:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 5l-7 7 7 7"/></svg>',
+ check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M5 12l5 5 9-10"/></svg>',
+ prev:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 5l-7 7 7 7"/></svg>',
+ next:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>'
+};
+
+// ---------- 保存 ----------
+var saveTimer=null;
+function toast(msg,ms){var t=document.getElementById('toast');if(!t)return;t.textContent=msg;t.classList.add('on');clearTimeout(t._h);if(ms)t._h=setTimeout(function(){t.classList.remove('on');},ms);}
+function buildDoc(){
+  var css=document.getElementById('css').textContent;
+  var data=document.getElementById('data').textContent;
+  var js=document.getElementById('appjs').textContent;
+  var st=JSON.stringify(state).replace(/</g,'\\u003c');
+  var SC='</'+'script>';
+  return '<!DOCTYPE html>\n<html lang="ja">\n<head>'+HEAD+'<style id="css">'+css+'</style></head><body><div id="app"></div><script type="application/json" id="data">'+data+SC+'<script type="application/json" id="state">'+st+SC+'<script id="appjs">'+js+SC+'</body></html>';
+}
+function save(){
+  if(mode==='local'){lsSet();toast('保存しました',1200);return;}
+  if(readOnly)return;
+  toast('保存中…');
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(function(){
+    try{sessionStorage.setItem('yarukoto-view',location.hash||'');}catch(e){}
+    artifactApi.publish(buildDoc()).then(function(){toast('保存しました',1500);},function(err){
+      var c=err&&err.code;
+      if(c==='conflict'){toast('別の端末の更新を読み込みます',2000);}
+      else if(c==='not_writer'||c==='not_granted'||c==='not_declared'||c==='consent_required'){readOnly=true;toast('この画面は閲覧専用です',2500);render();}
+      else if(c==='rate_limited'){toast('保存が混み合っています。少し待ってもう一度',2500);}
+      else{toast('保存できませんでした。もう一度操作してください',2500);}
+    });
+  },1800);
+}
+
+// ---------- 予定 ----------
+function evActive(e,day){return e.date<=day&&day<=e.end;}
+function evRow(e,opt){
+  opt=opt||{};
+  var done=!!state.done[e.id];
+  var w, cls='when';
+  if(evActive(e,TODAY)){w=e.end===TODAY?'今日まで':'〆'+md(e.end).replace(/（.）/,'');cls+=' today';}
+  else if(e.end<TODAY){w=md(e.end);cls+=' late';}
+  else{var n=diff(TODAY,e.date);w=n===1?'明日':md(e.date);}
+  var t=TASK[e.task];
+  return '<div class="row k-'+e.kind+(done?' done':'')+'"><span class="stripe"></span>'+
+    '<button class="chk" data-done="'+e.id+'" aria-pressed="'+done+'" aria-label="'+esc(e.title)+'を完了にする"'+(readOnly?' disabled':'')+'>'+IC.check+'</button>'+
+    '<a class="main" href="#t-'+e.task+'" style="color:inherit;text-decoration:none"><div class="t">'+esc(e.title)+'</div><div class="s">旗振り役 '+esc(t.flag)+'・'+esc(t.who)+(e.date!==e.end?'・'+md(e.date)+'〜'+md(e.end):'')+'</div></a>'+
+    '<span class="'+cls+'">'+w+'</span></div>';
+}
+function curZ(){for(var i=0;i<ZPER.length;i++){if(TODAY<=ZPER[i][3])return i;}return ZPER.length-1;}
+
+function viewToday(){
+  var ev=DATA.events;
+  var from=addDays(TODAY,-14), to=addDays(TODAY,14);
+  var late=ev.filter(function(e){return e.end<TODAY&&e.end>=from&&!state.done[e.id]&&e.kind!=='do';});
+  var now=ev.filter(function(e){return evActive(e,TODAY);});
+  var soon=ev.filter(function(e){return e.date>TODAY&&e.date<=to;});
+  var zi=curZ(), zv=state.tracker[zi], zp=ZPER[zi];
+  var zpct=Math.min(100,Math.round((+zv||0)*10));
+  var h='';
+  h+='<div class="kpi" style="margin-top:16px"><div class="'+(late.length?'late':'')+'"><b>'+late.length+'</b><span>やり残し</span></div><div><b>'+now.length+'</b><span>今日</span></div><div><b>'+soon.length+'</b><span>2週間以内</span></div></div>';
+  if(late.length){h+='<h2>やり残し <span class="n">終わったらチェック</span></h2><div class="card">'+late.map(evRow).join('')+'</div>';}
+  h+='<h2>今日 <span class="n">'+md(TODAY)+'</span></h2><div class="card">'+(now.length?now.map(evRow).join(''):'<div class="empty">今日が期限・期間中の予定はありません</div>')+'</div>';
+  h+='<h2>これから2週間</h2><div class="card">'+(soon.length?soon.map(evRow).join(''):'<div class="empty">予定はありません</div>')+'</div>';
+  if(TODAY<=ZPER[5][3]){
+    h+='<h2>０→１ いまの期 <span class="n">第'+(zi+1)+'期 '+zp[0]+'〜'+zp[1]+'</span></h2><a class="card row" href="#t-zero1" style="display:flex;border-top:1px solid var(--line)"><div class="main"><div class="t">'+(zv==null?'実績 未入力':'実績 '+zv+' / 10件')+'</div><div class="meter"><i style="width:'+zpct+'%"></i></div></div>'+IC.chev+'</a>';
+  }
+  var visit=DATA.tasks.filter(function(t){return t.cat==='訪問時';});
+  h+='<h2>訪問時チェック <span class="n">客先に行くたびに</span></h2><div class="card">'+visit.map(function(t){return '<a class="row" href="#t-'+t.id+'"><div class="main"><div class="t">'+esc(t.name)+'</div><div class="s">'+esc(t.note)+'</div></div>'+IC.chev+'</a>';}).join('')+'</div>';
+  return h;
+}
+
+function viewList(){
+  var h='';
+  ['期限あり','定例','訪問時'].forEach(function(cat){
+    var ts=DATA.tasks.filter(function(t){return t.cat===cat;});
+    h+='<h2>'+cat+' <span class="n">'+ts.length+'件</span></h2><div class="card">';
+    ts.forEach(function(t){
+      var st=statusOf(t.id);
+      var nx=DATA.events.filter(function(e){return e.task===t.id&&e.end>=TODAY;})[0];
+      h+='<a class="row" href="#t-'+t.id+'"><div class="main"><div class="t">'+esc(t.name)+'</div><div class="s">'+esc(t.freq)+'・旗振り役 '+esc(t.flag)+(nx?'・次 '+md(nx.date):'')+'</div></div>'+(st?'<span class="pill p-'+st+'">'+st+'</span>':'')+IC.chev+'</a>';
+    });
+    h+='</div>';
+  });
+  return h;
+}
+
+function viewDetail(id){
+  var t=TASK[id]; if(!t)return viewList();
+  var st=statusOf(id), dis=readOnly?' disabled':'';
+  var h='<a class="back" href="#list">'+IC.back+'一覧へ</a>';
+  h+='<div class="dhead"><div class="cat">'+esc(t.cat)+'</div><h2>'+esc(t.name)+'</h2></div>';
+  h+='<dl class="facts"><dt>旗振り役</dt><dd>'+esc(t.flag)+'</dd><dt>やる人</dt><dd>'+esc(t.who)+'</dd><dt>頻度／締切</dt><dd>'+esc(t.freq)+'</dd><dt>どこで</dt><dd>'+esc(t.where)+'</dd><dt>貢献先</dt><dd>'+esc(t.contrib)+'</dd>'+(t.note?'<dt>メモ</dt><dd>'+esc(t.note)+'</dd>':'')+'</dl>';
+  h+='<label class="f" for="f-status">状況</label><select id="f-status" data-status="'+id+'"'+dis+'><option value="">（なし）</option>'+STATUSES.map(function(s){return '<option'+(s===st?' selected':'')+'>'+s+'</option>';}).join('')+'</select>';
+  if(id==='zero1'){
+    var cum=0,ci=curZ();
+    h+='<h2>件数トラッカー <span class="n">2週で10件</span></h2><table class="trk"><thead><tr><th>期間</th><th>実績</th><th>累計</th><th>累計目標</th><th>達成率</th></tr></thead><tbody>';
+    ZPER.forEach(function(p,i){var v=state.tracker[i];if(v!=null)cum+=+v;var goal=10*(i+1);
+      h+='<tr'+(i===ci?' class="cur"':'')+'><td>第'+(i+1)+'期 '+p[0]+'〜'+p[1]+'</td><td><input type="number" min="0" inputmode="numeric" id="trk-'+i+'" data-trk="'+i+'" value="'+(v==null?'':v)+'" aria-label="第'+(i+1)+'期の実績"'+dis+'></td><td>'+(v==null?'':cum)+'</td><td>'+goal+'</td><td>'+(v==null?'':Math.round(cum/goal*100)+'%')+'</td></tr>';});
+    h+='</tbody></table>';
+  }
+  h+='<h2>中身</h2><div class="card" style="padding:4px 12px 12px">';
+  [['purpose','目的（なぜやるか）'],['goal','ゴール（何をもって完了か）'],['how','手順・やり方'],['links','関連資料（共有フォルダの場所など）']].forEach(function(f){
+    h+='<label class="f" for="fld-'+f[0]+'">'+f[1]+'</label><textarea id="fld-'+f[0]+'" data-fld="'+f[0]+'"'+dis+'>'+esc(fieldOf(id,f[0]))+'</textarea>';});
+  h+='<div class="btns"><button class="btn" id="save-fields" data-id="'+id+'"'+dis+'>中身を保存</button></div></div>';
+  var ms=state.memos[id]||[];
+  h+='<h2>進捗メモ <span class="n">'+ms.length+'件</span></h2><div class="card">'+(ms.length?ms.map(function(m,i){return '<div class="memo">'+(readOnly?'':'<button class="x" data-delmemo="'+i+'" aria-label="このメモを消す">消す</button>')+'<div class="d">'+md(m.d)+'</div><div><b>やったこと</b> '+esc(m.did)+'</div>'+(m.next?'<div><b>次にやること</b> '+esc(m.next)+'</div>':'')+'</div>';}).join(''):'<div class="empty">まだありません</div>')+'</div>';
+  if(!readOnly){
+    h+='<div class="card" style="padding:4px 12px 12px;margin-top:8px"><div class="grid3"><div><label class="f" for="m-d">日付</label><input type="date" id="m-d" value="'+TODAY+'"></div></div><label class="f" for="m-did">やったこと</label><input type="text" id="m-did"><label class="f" for="m-next">次にやること</label><input type="text" id="m-next"><div class="btns"><button class="btn" id="add-memo" data-id="'+id+'">メモを追加</button></div></div>';
+  }
+  var evs=DATA.events.filter(function(e){return e.task===id&&e.end>=TODAY;});
+  h+='<h2>これからの予定 <span class="n">'+evs.length+'件</span></h2><div class="card">'+(evs.length?evs.map(evRow).join(''):'<div class="empty">カレンダーに載る予定はありません</div>')+'</div>';
+  return h;
+}
+
+var calMonth=null, calSel=TODAY;
+function viewCal(){
+  if(!calMonth){var d=parse(TODAY);calMonth=[d.getFullYear(),d.getMonth()];}
+  var y=calMonth[0],m=calMonth[1];
+  var first=new Date(y,m,1), start=new Date(first); var off=(first.getDay()+6)%7; start.setDate(1-off);
+  var minM=[2026,9], maxM=[2027,2];
+  var canPrev=(y*12+m)>(minM[0]*12+minM[1]), canNext=(y*12+m)<(maxM[0]*12+maxM[1]);
+  var h='<div class="calbar"><button class="iconbtn" id="cal-prev" aria-label="前の月"'+(canPrev?'':' disabled')+'>'+IC.prev+'</button><h2>'+y+'年 '+(m+1)+'月</h2><button class="iconbtn" id="cal-next" aria-label="次の月"'+(canNext?'':' disabled')+'>'+IC.next+'</button></div>';
+  h+='<div class="cal">'+['月','火','水','木','金','土','日'].map(function(w,i){return '<div class="wd'+(i===5?' sat':i===6?' sun':'')+'">'+w+'</div>';}).join('');
+  var dim=new Date(y,m+1,0).getDate(), cells=Math.ceil((off+dim)/7)*7;
+  for(var i=0;i<cells;i++){
+    var d=new Date(start);d.setDate(start.getDate()+i);var s=iso(d);
+    var evs=DATA.events.filter(function(e){return evActive(e,s);});
+    var c='day'+(d.getMonth()!==m?' out':'')+(d.getDay()===0?' sun':d.getDay()===6?' sat':'')+(HOL[s]?' hol':'')+(s===TODAY?' is-today':'')+(s===calSel?' sel':'');
+    h+='<button class="'+c+'" data-day="'+s+'" aria-label="'+md(s)+' 予定'+evs.length+'件"><span class="num">'+d.getDate()+'</span>';
+    evs.slice(0,3).forEach(function(e){h+='<span class="ev k-'+e.kind+(state.done[e.id]?' isdone':'')+'">'+SHORT[e.task]+'</span>';});
+    if(evs.length>3)h+='<span class="more">+'+(evs.length-3)+'</span>';
+    h+='</button>';
+  }
+  h+='</div><div class="legend"><span><i style="background:var(--due)"></i>締切</span><span><i style="background:var(--accent)"></i>期間（月初・第3週）</span><span><i style="background:var(--do)"></i>勉強会</span><span>赤い日付＝土日祝・年末年始</span></div>';
+  var list=DATA.events.filter(function(e){return evActive(e,calSel);});
+  h+='<h2>'+md(calSel)+' <span class="n">'+list.length+'件</span></h2><div class="card">'+(list.length?list.map(evRow).join(''):'<div class="empty">予定はありません</div>')+'</div>';
+  return h;
+}
+
+function viewNotify(){
+  var h='<h2>スマホに通知を出すには</h2>';
+  h+='<div class="card"><ol class="steps">'+
+   '<li>チャットで受け取った「仕事やること_通知カレンダー.ics」を開きます（iPhoneはファイルをタップ、PCはダブルクリック）。</li>'+
+   '<li>「すべて追加」を選ぶと、カレンダーに「仕事やること」の予定が入ります。新しいカレンダーに分けて入れておくと、あとで一括で消せます。</li>'+
+   '<li>当日の朝8:30に通知が来ます。締切の予定は前日9:00にも通知が来ます。</li>'+
+  '</ol></div>';
+  h+='<p class="note">取り込みは1回だけにしてください。2回取り込むと予定が二重になります。ファイルに入っているのは2026年11月18日以降〜2027年3月末の予定です。</p>';
+  h+='<p class="note">Googleカレンダーに取り込んだ場合は、ファイルの通知時刻ではなくGoogleカレンダー側の通知設定が使われます。</p>';
+  h+='<h2>このアプリに入っている予定の決め方</h2><div class="card">'+
+   [['月初3営業日','CE案件の整理・月初見込み','土日祝と年末年始（12/29〜1/3）を除いて数えています'],['2週目の金曜','最終見込み','その月の2回目の金曜'],['第3週','棚卸・部品の整理','半年スケジュールの◎の週（月〜金）'],['毎週月曜','通信ミドル勉強会','2/15まで。祝日の月曜は入れていません'],['2週ごと','０→１ 期の締め','各期の最終日（金曜）'],['締切','消滅10/30・通信ミドル2/26・8950点検3/31','']].map(function(r){return '<div class="row"><div class="main"><div class="t">'+r[0]+'：'+r[1]+'</div>'+(r[2]?'<div class="s">'+r[2]+'</div>':'')+'</div></div>';}).join('')+'</div>';
+  h+='<p class="note">医療機器テストと訪問時の3つは日付が決まっていないので、カレンダーには入れていません。</p>';
+  return h;
+}
+
+// ---------- 画面 ----------
+function route(){var h=(location.hash||'').slice(1);if(h.indexOf('t-')===0)return {v:'detail',id:h.slice(2)};if(['list','cal','notify'].indexOf(h)>=0)return {v:h};return {v:'today'};}
+function render(){
+  var r=route(), body;
+  if(r.v==='detail')body=viewDetail(r.id);else if(r.v==='list')body=viewList();else if(r.v==='cal')body=viewCal();else if(r.v==='notify')body=viewNotify();else body=viewToday();
+  var tab=r.v==='detail'?'list':r.v;
+  var d=parse(TODAY);
+  var tabs=[['today','きょう',IC.today],['list','一覧',IC.list],['cal','カレンダー',IC.cal],['notify','通知',IC.bell]];
+  document.getElementById('app').innerHTML=
+    '<header class="top"><div class="in"><h1>やること</h1><span class="date">'+d.getFullYear()+'年'+md(TODAY)+'</span></div></header>'+
+    '<main class="wrap"><div class="ro'+(readOnly?' on':'')+'">閲覧専用で開いています。チェックやメモは保存されません。</div>'+body+'</main>'+
+    '<nav class="tabs" aria-label="画面切り替え"><div class="in">'+tabs.map(function(t){return '<a href="#'+t[0]+'"'+(tab===t[0]?' aria-current="page"':'')+'>'+t[2]+t[1]+'</a>';}).join('')+'</div></nav><div class="toast" id="toast" role="status"></div>';
+}
+document.addEventListener('click',function(ev){
+  var el=ev.target.closest('[data-done],[data-day],#cal-prev,#cal-next,#save-fields,#add-memo,[data-delmemo]');
+  if(!el||readOnly&&!el.matches('[data-day],#cal-prev,#cal-next'))return;
+  if(el.dataset.done){var id=el.dataset.done;if(state.done[id])delete state.done[id];else state.done[id]=true;render();save();return;}
+  if(el.dataset.day){calSel=el.dataset.day;var d=parse(calSel);calMonth=[d.getFullYear(),d.getMonth()];render();return;}
+  if(el.id==='cal-prev'||el.id==='cal-next'){var k=calMonth[0]*12+calMonth[1]+(el.id==='cal-next'?1:-1);calMonth=[Math.floor(k/12),k%12];render();return;}
+  var tid=route().id;
+  if(el.id==='save-fields'){var f=state.fields[tid]=state.fields[tid]||{};document.querySelectorAll('[data-fld]').forEach(function(t){f[t.dataset.fld]=t.value;});save();return;}
+  if(el.id==='add-memo'){var did=document.getElementById('m-did').value.trim();if(!did){toast('「やったこと」を入れてください',1800);return;}
+    var a=state.memos[tid]=state.memos[tid]||[];a.push({d:document.getElementById('m-d').value||TODAY,did:did,next:document.getElementById('m-next').value.trim()});a.sort(function(x,y){return x.d<y.d?-1:x.d>y.d?1:0;});render();save();return;}
+  if(el.dataset.delmemo!=null){state.memos[tid].splice(+el.dataset.delmemo,1);render();save();return;}
+});
+document.addEventListener('change',function(ev){
+  var el=ev.target;if(readOnly)return;
+  if(el.dataset.status){state.status[el.dataset.status]=el.value;save();return;}
+  if(el.dataset.trk!=null){var v=el.value===''?null:Math.max(0,parseInt(el.value,10)||0);state.tracker[+el.dataset.trk]=v;render();save();}
+});
+window.addEventListener('hashchange',function(){render();window.scrollTo(0,0);});
+try{var v=sessionStorage.getItem('yarukoto-view');if(v!=null){sessionStorage.removeItem('yarukoto-view');if(!location.hash&&v)location.hash=v;}}catch(e){}
+var saved=lsGet(); if(saved&&!Object.keys(state.done).length&&!Object.keys(state.memos).length){/* 単体HTMLで使う場合は端末内の保存を優先 */ state=saved;['status','fields','memos','done'].forEach(function(k){if(!state[k])state[k]={};});if(!state.tracker)state.tracker=[null,null,null,null,null,null];}
+render();
+// 電波がなくても起動できるように（GitHub Pagesに置いたときだけ）
+try{if('serviceWorker' in navigator&&location.protocol==='https:'&&!window.claude){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}}catch(e){}
+if(window.claude&&window.claude.use){window.claude.use('artifact').then(function(a){if(a){artifactApi=a;mode='artifact';state=JSON.parse(document.getElementById('state').textContent||'{}');['status','fields','memos','done'].forEach(function(k){if(!state[k])state[k]={};});if(!state.tracker)state.tracker=[null,null,null,null,null,null];render();}},function(){});}
+})();
+</script></body></html>
